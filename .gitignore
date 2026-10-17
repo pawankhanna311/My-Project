@@ -1,2 +1,5 @@
 node_modules/
 animation/out/
+# Generated locally from the user's reference clip (see animation/README.md)
+animation/public/reference.*
+animation/package-lock.json
