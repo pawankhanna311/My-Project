@@ -47,13 +47,17 @@ export const MataKiChowki: React.FC = () => {
   const headY = HEAD.y + cam.ty;
 
   // Darkness lifts top-down; p is the wipe edge in % of frame height.
-  const p = interpolate(frame, [T.revealStart, T.revealEnd], [-2, 125], {...clamp, easing: Easing.inOut(Easing.sin)});
+  // Fully dark until revealStart, a quick lead-in so light shows at once, then a long decelerating wipe.
+  const p =
+    frame < T.revealStart + 8
+      ? interpolate(frame, [T.revealStart, T.revealStart + 8], [-2, 22], {...clamp, easing: Easing.in(Easing.quad)})
+      : interpolate(frame, [T.revealStart + 8, T.revealEnd], [22, 125], {...clamp, easing: Easing.bezier(0.3, 0, 0.45, 1)});
   const bandY = ((p - 9) / 100) * 1920;
   const sweepOn = interpolate(frame, [T.revealStart, T.revealStart + 10, T.revealEnd - 15, T.revealEnd], [0, 1, 1, 0], clamp);
 
   const flicker = 0.88 + 0.12 * noise2D('flame', frame / 9, 0);
-  const coldGlow = interpolate(frame, [T.glowIn, 40, 95, 140], [0, 1, 1, 0], clamp) * flicker * 1.15;
-  const glowSize = interpolate(frame, [T.glowIn, 60], [120, 300], {...clamp, easing: Easing.out(Easing.cubic)});
+  const coldGlow = interpolate(frame, [T.glowIn, 14, 95, 140], [0, 1, 1, 0], clamp) * flicker * 1.15;
+  const glowSize = interpolate(frame, [T.glowIn, 30], [120, 300], {...clamp, easing: Easing.out(Easing.cubic)});
 
   const border = interpolate(frame, [110, 150], [0, 1], clamp);
   const diya = interpolate(frame, [T.diyas, T.diyas + 26], [0, 1], {...clamp, easing: Easing.out(Easing.cubic)});

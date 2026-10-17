@@ -9,8 +9,8 @@ The audio phrases breathe at about 4.5 s, 7.5 s and 10.5 s (loudness dips), so t
 
 | # | Frames | Time | Beat | Visual | Motion |
 |---|--------|------|------|--------|--------|
-| 1 | 0–45 | 0–1.5 s | Cold open | Black. One warm glow appears where Mata sits | Glow fades up, slow push starts (scale 1.25) |
-| 2 | 45–135 | 1.5–4.5 s | Temple wakes | Arch and carvings emerge from darkness top-down as a gold light sweep passes. Magenta background blooms in. Garlands fade in | Light sweep down the arch; background radial bloom; slow push continues |
+| 1 | 0–18 | 0–0.6 s | Cold open | Black. One warm glow appears where Mata sits | Glow fades up, slow push starts (scale 1.25) |
+| 2 | 18–135 | 0.6–4.5 s | Temple wakes | Arch and carvings emerge from darkness top-down as a gold light sweep passes. Magenta background blooms in. Garlands fade in | Light sweep down the arch; background radial bloom; slow push continues |
 | 3 | 135–195 | 4.5–6.5 s | **Hero: halo ignites** | Halo behind Mata bursts into slowly rotating rays; the tiger and offerings brighten; petals begin to fall | Ray burst on the 4.5 s phrase start; a heavily damped spring settles the camera at scale 1.0; held for about 2 s |
 | 4 | 195–255 | 6.5–8.5 s | Title | "MATA KI CHOWKI" rises with a mask and a metallic shine sweeps across it | Mask rise of 20 frames, then a 25-frame shine |
 | 5 | 255–300 | 8.5–10 s | Information | Invitation lines, then date/time, then address fade up 6 frames apart. Diyas fade in on both sides | Staggered fade + 12 px rise, ease-out |

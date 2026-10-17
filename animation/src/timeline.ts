@@ -3,8 +3,8 @@ export const FPS = 30;
 export const DURATION = 360;
 
 export const T = {
-  glowIn: 8, // warm glow appears in the dark
-  revealStart: 45, // light sweep starts down the arch
+  glowIn: 1, // warm glow appears in the dark (dark opening is 0–0.6s)
+  revealStart: 18, // light sweep starts down the arch at 0.6s
   revealEnd: 135,
   halo: 135, // hero: halo ignites (4.5s phrase)
   petalsStart: 120,
