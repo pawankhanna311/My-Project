@@ -1,0 +1,24 @@
+{
+  "name": "mata-ki-chowki-animation",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "render": "remotion render MataKiChowki out/mata-ki-chowki.mp4",
+    "still": "remotion still MataKiChowki out/still.png --frame=60"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.536",
+    "@remotion/transitions": "4.0.536",
+    "@remotion/noise": "4.0.536",
+    "@remotion/google-fonts": "4.0.536",
+    "@remotion/paths": "4.0.536",
+    "remotion": "4.0.536",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "19.1.0",
+    "typescript": "5.8.3"
+  }
+}
