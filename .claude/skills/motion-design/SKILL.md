@@ -71,6 +71,17 @@ Study 2–4 real trailers in the subject's genre. For each one, write down the *
   `ffmpeg -i music.mp3 -af "silencedetect=n=-30dB:d=0.1" -f null -` or by beat-mapping BPM to frames (`frame = beat * 60/BPM * fps`).
 - **Readability**: every information card stays on screen ≥ 2.5 s (75 frames at 30 fps), keeps a safe area of 6% from the edges, and has enough contrast.
 
+## Working from a low-res source
+
+When the only source is a compressed video or screenshot:
+- **Denoise by averaging.** For a static design, `ffmpeg -vf "tmix=frames=60"` gives one clean frame.
+- **Crop out watermarks.** Editor watermarks (InShot, CapCut) usually sit in the letterbox, outside the artwork.
+- **Upscale with ESRGAN from npm** when Hugging Face or GitHub are blocked: `upscaler` + `@upscalerjs/esrgan-thick` + `@tensorflow/tfjs-node` (about 50 s for a 478x726 image at 4x on CPU). It is visibly sharper on faces than Lanczos.
+- **Cut layers against a fitted background.** Fit a low-order polynomial to the flat background colour, set alpha from the distance to that model, and flood-fill enclosed holes (e.g. the sky inside an arch). A morphological opening removes thin decorative border strokes from the cut-outs; redraw the border in CSS at the new aspect ratio.
+- **Rebuild all text as live type.** Use a matching font from `@fontsource/*` on npm, copied into `public/fonts` and loaded with `FontFace` plus `delayRender`. It stays crisp at any scale and can be animated per line.
+- **Light behind the subject.** If the subject can't be separated from its backdrop, put the big light effects (rays) behind the whole artwork layer and keep only soft glows over it. Rays drawn over a face look cheap.
+- **Fill the frame on every beat.** When the layout has an empty zone until the text arrives, frame the camera on the hero and pull back as the text comes in.
+
 ## Phase 4: Render engineer loop
 
 Repeat until clean:

@@ -1,4 +1,4 @@
-# Mata Ki Chowki: shot list (v1)
+# Mata Ki Chowki: shot list (v2, as built)
 
 **Direction:** Darkness → Divine reveal, made from the same artwork split into layers.
 **Format:** 1080×1920 (9:16), 30 fps, 12 s (360 frames), using the original clip's audio.
@@ -16,6 +16,10 @@ The audio phrases breathe at about 4.5 s, 7.5 s and 10.5 s (loudness dips), so t
 | 5 | 255–300 | 8.5–10 s | Information | Invitation lines, then date/time, then address fade up 6 frames apart. Diyas fade in on both sides | Staggered fade + 12 px rise, ease-out |
 | 6 | 300–360 | 10–12 s | Blessing hold | "JAI MATA DI" glow pulse on the 10.5 s phrase. Everything is readable; only petals and the halo keep moving | Single glow pulse; ambient motion only |
 
+## Camera (added in v2)
+
+The camera pushes in from 1.55x to 1.3x through the reveal, framed so the shrine is centred for the hero beat. From frame 184 to 224 it pulls back to the full invitation while the title rises. The long halo rays sit *behind* the arch so they pour out around the shrine without striping Mata's face. Only a soft aura and short rays around the halo ring sit over the artwork.
+
 ## Layer plan (from the original artwork)
 
 1. Background magenta gradient (rebuilt as a CSS gradient for crispness)
@@ -27,6 +31,6 @@ The audio phrases breathe at about 4.5 s, 7.5 s and 10.5 s (loudness dips), so t
 7. Text blocks (rebuilt as live text in a matching gold font, so they stay crisp)
 8. Petal particles (generated, seeded, 3 depth layers)
 
-## Waiting on
+## Source
 
-- The original high-resolution poster (and layered PSD/Canva export or a separate Mata image if available).
+Built from the video itself (no original artwork was available): 60-frame average, then ESRGAN 4x upscale, then layer cut-outs. See README.md. If the original poster turns up, rerun the layer scripts on it for a sharper result.

@@ -9,15 +9,16 @@
   },
   "dependencies": {
     "@remotion/cli": "4.0.536",
-    "@remotion/transitions": "4.0.536",
-    "@remotion/noise": "4.0.536",
     "@remotion/google-fonts": "4.0.536",
+    "@remotion/noise": "4.0.536",
     "@remotion/paths": "4.0.536",
-    "remotion": "4.0.536",
+    "@remotion/transitions": "4.0.536",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "remotion": "4.0.536"
   },
   "devDependencies": {
+    "@fontsource/montserrat": "^5.3.0",
     "@types/react": "19.1.0",
     "typescript": "5.8.3"
   }
